@@ -1,0 +1,60 @@
+/* Animaciones */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Transición suave */
+.ads-container {
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+/* Cuando interactúan con header */
+app-header:hover ~ * .ads-container,
+app-header:active ~ * .ads-container,
+app-header:focus-within ~ * .ads-container {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+
+/* Cuando interactúan con footer */
+app-footer:hover ~ * .ads-container,
+app-footer:active ~ * .ads-container,
+app-footer:focus-within ~ * .ads-container {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}

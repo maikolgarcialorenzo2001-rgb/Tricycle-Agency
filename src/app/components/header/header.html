@@ -1,0 +1,125 @@
+<header class="w-screen h-24 sm:h-28
+    bg-linear-to-r from-green-600 via-green-500 to-emerald-600
+    flex items-center justify-between
+    px-3 sm:px-6 md:px-8
+    shadow-xl shadow-black/40
+    border-b border-white/10
+    backdrop-blur-md
+    select-none relative z-50">
+
+    <figure class="flex items-center">
+        <img
+            src="assets/img/agency-logo.png"
+            alt="logo"
+            class="h-32 sm:h-28 md:h-32 lg:40 pointer-events-none drop-shadow-lg">
+    </figure>
+
+    <div class="flex flex-col items-center justify-center leading-tight text-center">
+        <h1 class="text-white font-serif text-xl sm:text-2xl md:text-3xl tracking-wide drop-shadow-sm mr-20">
+            Eco-Taxis
+        </h1>
+
+        <h1 class="text-white font-serif text-3xl sm:text-3xl md:text-4xl font-semibold tracking-wide drop-shadow-md">
+            Viñales
+        </h1>
+    </div>
+
+    <button
+        type="button"
+        (click)="toggleMenu()"
+        [ngClass]="{
+            'bg-green-400 scale-105 shadow-green-300/50': menuStatus(),
+            'bg-green-700': !menuStatus()
+        }"
+
+        class="flex flex-col items-center justify-center
+        px-3 py-2 rounded-2xl
+        text-white font-bold
+        transition-all duration-300
+        active:scale-95 hover:scale-[1.05]
+        shadow-lg shadow-black/30
+        border border-white/10 cursor-pointer">
+
+        <span class="text-sm sm:text-base tracking-wide">Menú</span>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path fill="currentColor" d="M2 2h20v2H2zm0 18h20v2H2zM2 4h2v16H2zm18 0h2v16h-2zM7 7h10v2H7zm0 4h10v2H7zm0 4h10v2H7z"/></svg>
+
+    </button>
+</header>
+
+<div
+    [ngClass]="{
+        'opacity-100 max-h-96 translate-y-0': menuStatus(),
+        'opacity-0 max-h-0 -translate-y-4 pointer-events-none': !menuStatus()
+    }"
+
+    class="bg-green-600/95 backdrop-blur-xl
+    border-t border-white/20
+    overflow-hidden
+    transition-all duration-500 ease-in-out
+    shadow-2xl shadow-black/30">
+
+    <nav class="flex flex-col sm:flex-row gap-3 p-4 sm:p-6">
+
+        <a
+            routerLink="/"
+            [ngClass]="{
+                'opacity-60 pointer-events-none bg-green-900': currentRoute() === '/',
+                'bg-green-500 hover:bg-green-400': currentRoute() !== '/'
+            }"
+
+            class="flex items-center justify-center gap-3
+            w-full p-3 sm:p-4
+            rounded-2xl
+            text-white font-bold
+            shadow-md shadow-black/30
+            transition-all duration-300
+            active:scale-95 cursor-pointer">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="currentColor"><path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06z"/><path d="m12 5.432l8.159 8.159q.045.044.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198l.091-.086z"/></g></svg>
+
+            Inicio
+        </a>
+
+        <a
+            routerLink="/services"
+            [ngClass]="{
+                'opacity-60 pointer-events-none bg-green-900': currentRoute() === '/services',
+                'bg-green-500 hover:bg-green-400': currentRoute() !== '/services'
+            }"
+
+            class="flex items-center justify-center gap-3
+            w-full p-3 sm:p-4
+            rounded-2xl
+            text-white font-bold
+            shadow-md shadow-black/30
+            transition-all duration-300
+            active:scale-95 cursor-pointer">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><g fill="none"><path stroke="currentColor" stroke-linejoin="round" stroke-width="4" d="M4 35v-7.29a6 6 0 0 1 3.319-5.368l.682-.34l2.31-7.91A4 4 0 0 1 14.205 11h19.688a4 4 0 0 1 3.904 3.128l2.205 7.874l.68.34A6 6 0 0 1 44 27.708V35a3 3 0 0 1-3 3h-1.997v1a4 4 0 0 1-4 4A4 4 0 0 1 31 39v-1H17v1a4 4 0 1 1-8 0v-1H7a3 3 0 0 1-3-3Z"/><path fill="currentColor" d="M13.5 33a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5m21 0a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M18 11h12l-.991-4.956C28.887 5.434 28.399 5 27.837 5h-7.674c-.563 0-1.05.434-1.172 1.044z" clip-rule="evenodd"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M15 23h18"/></g></svg>
+
+            Servicios
+        </a>
+
+        <a
+            routerLink="/about-us"
+            [ngClass]="{
+                'opacity-60 pointer-events-none bg-green-900': currentRoute() === '/about-us',
+                'bg-green-500 hover:bg-green-400': currentRoute() !== '/about-us'
+            }"
+
+            class="flex items-center justify-center gap-3
+            w-full p-3 sm:p-4
+            rounded-2xl
+            text-white font-bold
+            shadow-md shadow-black/30
+            transition-all duration-300
+            active:scale-95 cursor-pointer">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512"><path fill="currentColor" d="M256 256a112 112 0 1 0-112-112a112 112 0 0 0 112 112m0 32c-69.42 0-208 42.88-208 128v64h416v-64c0-85.12-138.58-128-208-128"/></svg>
+
+            Sobre Nosotros
+        </a>
+
+    </nav>
+</div>

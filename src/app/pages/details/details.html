@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<section class="w-full bg-slate-50 py-16 h-screen overflow-y-auto">
+    <div class="max-w-5xl mx-auto px-6">
+
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 select-none">
+            {{ openedService?.name }}
+        </h1>
+
+        <div class="bg-white shadow-md p-6 rounded-xl border border-slate-100 ">
+            <p class="text-md text-slate-700 leading-relaxed h-50 overflow-hidden overflow-y-auto select-none">
+                {{ openedService?.fullDescription }}
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-16 mb-16">
+
+            <div class="bg-white shadow-md p-6 rounded-xl border border-slate-100">
+                <h3 class="font-semibold text-slate-900 mb-2 select-none">Tiempo estimado</h3>
+                <p class="text-slate-600 text-sm select-none">{{ openedService?.stimateTime }}</p>
+            </div>
+
+        </div>
+
+        <h2 class="text-2xl font-semibold text-slate-900 mb-6 select-none">Beneficios</h2>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-48">
+            <div class="bg-white shadow-md p-6 rounded-xl border border-slate-100 min-h-25 max-h-30">
+                <h3 class="font-semibold text-slate-900 mb-2 select-none">Rápido y seguro</h3>
+                <p class="text-slate-600 text-sm select-none">Movilidad confiable en todo momento.</p>
+            </div>
+
+            <div class="bg-white shadow-md p-6 rounded-xl border border-slate-100 min-h-25 max-h-30">
+                <h3 class="font-semibold text-slate-900 mb-2 select-none">Atención personalizada</h3>
+                <p class="text-slate-600 text-sm select-none">Comunicación directa y clara.</p>
+            </div>
+
+            <div class="bg-white shadow-md p-6 rounded-xl border border-slate-100 min-h-25 max-h-30">
+                <h3 class="font-semibold text-slate-900 mb-2 select-none">Precios transparentes</h3>
+                <p class="text-slate-600 text-sm select-none">Sin sorpresas ni costos ocultos.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<app-footer></app-footer>

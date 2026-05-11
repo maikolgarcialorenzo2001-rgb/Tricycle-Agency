@@ -1,0 +1,19 @@
+.glow-effect::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent
+    );
+
+    transform: translateX(-100%);
+    transition: 0.8s;
+}
+
+.glow-effect:hover::before {
+    transform: translateX(100%);
+}

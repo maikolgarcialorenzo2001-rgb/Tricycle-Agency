@@ -1,0 +1,80 @@
+<app-header></app-header>
+
+<div class="h-[72vh] overflow-y-auto select-none
+    px-3 sm:px-6 py-4
+    bg-linear-to-b from-white to-gray-100
+    ios-safe-area">
+
+    <div class="flex justify-center mb-6">
+        <div class="bg-green-600/90 backdrop-blur-md
+            p-3 px-5
+            rounded-3xl
+            text-white font-bold text-xl
+            flex items-center gap-3
+            shadow-lg shadow-black/20
+            border border-white/20
+            w-[90%] sm:w-[70%] justify-center">
+
+            <h1 class="tracking-wide">Listado de Servicios</h1>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" class="opacity-90">
+
+                <path fill="currentColor"
+                    d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05a2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+
+        @for (service of services.services; track $index) {
+
+        <div [id]="service.id" class="bg-white/80 backdrop-blur-md
+            rounded-3xl overflow-hidden
+            shadow-xl shadow-black/10
+            border border-white/40
+            hover:scale-[1.02]
+            transition-all duration-300">
+
+            <img class="w-full h-44 object-cover pointer-events-none" [src]="service.imgRoute" alt="">
+
+            <div class="p-4">
+
+                <h3 class="text-lg font-bold text-gray-800">
+                    {{service.name}}
+                </h3>
+
+                <p class="text-sm text-gray-600 mt-1">
+                    <span class="font-semibold text-gray-800">Descripción:</span>
+                    {{service.description}}
+                </p>
+
+                <div class="flex items-center justify-between mt-4">
+
+                    <p class="text-green-700 font-bold text-lg">
+                        ${{service.minPrice}} ~ ${{service.maxPrice}}
+                    </p>
+
+                    <a (click)="connectionServices.setSelected(service.id)"
+                        [routerLink]="['/services', service.id]" class="bg-linear-to-r from-green-500 to-emerald-700
+                        text-white font-bold
+                        px-4 py-2
+                        rounded-2xl
+                        shadow-md shadow-green-900/30
+                        transition-all duration-300
+                        active:scale-95 hover:scale-[1.05]">
+
+                        Detalles
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        @if(($index+1) === services.services.length){<div class="h-10"></div>}
+        }
+
+    </div>
+</div>
+
+<app-footer></app-footer>

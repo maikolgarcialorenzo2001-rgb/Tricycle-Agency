@@ -1,0 +1,89 @@
+🏗️ Estructura de la página web
+1. Header / Navegación
+Logo de la agencia
+
+Menú principal con secciones:
+
+Inicio
+Servicios
+Tarifas
+Reservar
+Contacto
+
+Botón destacado: “Reserva tu triciclo”
+
+2. Hero Section (Portada)
+Imagen o video de triciclos eléctricos en acción
+
+Texto claro: “Movilidad eléctrica para tu ciudad”
+
+CTA (Call to Action): “Alquila ahora”
+
+3. Servicios principales
+Un bloque con íconos o tarjetas para cada servicio:
+
+🚲 Alquiler por horas/días
+
+📦 Entrega de paquetes
+
+🏠 Domicilios y envíos locales
+
+🚕 Viajes urbanos
+
+🔋 Triciclos eléctricos sostenibles
+
+4. Cómo funciona
+Un paso a paso sencillo:
+
+Reserva online o por teléfono
+
+Recibe tu triciclo en casa o en la agencia
+
+Usa el servicio (viaje, entrega, alquiler)
+
+Pago fácil y seguro
+
+5. Tarifas / Planes
+Tabla clara con precios:
+
+Plan básico (por hora)
+
+Plan diario
+
+Plan de entregas (paquetes)
+
+Plan corporativo (empresas)
+
+6. Beneficios
+Ecológico y silencioso
+
+Ahorro frente a taxis/motos
+
+Entregas rápidas en la ciudad
+
+Seguro incluido
+
+7. Testimonios / Opiniones
+Breves reseñas de clientes satisfechos para generar confianza.
+
+8. CTA Final
+Un bloque con botón grande:
+“Reserva tu triciclo eléctrico ahora”
+
+9. Footer
+Datos de contacto
+
+WhatsApp / Teléfono directo
+
+Redes sociales
+
+Políticas de privacidad
+
+🎨 Estilo visual recomendado
+Colores: Verde (ecología), Azul (confianza), Blanco (limpieza)
+
+Íconos minimalistas para cada servicio
+
+Animaciones suaves (hover en botones, transiciones de secciones)
+
+Diseño responsive para móviles
